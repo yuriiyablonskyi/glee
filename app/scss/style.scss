@@ -1,8 +1,122 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'global';
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
 
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 45px;
+  }
+}
 
+.menu {
+  &__list {
+    display: flex;
+  }
 
-@import 'media';
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__link {
+    color: $color_1;
+    font-family: $poppins;
+    font-size: 15px;
+    transition: color 0.15s linear;
+  }
+
+  &__link:hover {
+    color: $color_4;
+  }
+}
+
+.user {
+  display: flex;
+
+  &__search,
+  &__other,
+  &__link {
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__search,
+  &__other {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+
+  &__search {
+    margin-right: 21px;
+  }
+
+  &__other {
+    background-color: $color_3;
+  }
+
+  &__search:after {
+    background-image: url("../images/header/search.svg");
+  }
+
+  &__other:after {
+    background-image: url("../images/header/other.svg");
+  }
+
+  &__search:after,
+  &__other:after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 16px;
+    width: 16px;
+  }
+
+  &__shopping {
+    background-color: $color_4;
+    width: 180px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 41px 13px;
+    margin-right: 18px;
+  }
+
+  &__link {
+    height: 19px;
+    width: 17px;
+  }
+
+  &__link:after {
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: contain;
+    // height: 19px;
+    // width: 16px;
+  }
+
+  &__link--one {
+    background-image: url("../images/header/favorites.svg");
+  }
+  
+  &__link--two {
+    background-image: url("../images/header/basket.svg");
+  }
+  
+  &__numbers {
+    font-size: 10px;
+    display: none;
+    // position: absolute;
+  }
+}
+
+@import "media";
