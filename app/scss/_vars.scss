@@ -2,7 +2,42 @@ $color_1: #2B6373;
 $color_2: #ECF1F4;
 $color_3: #9ABCCA;
 $color_4: #FFD8B6;
+$color_5: #FFE8D3;
+$color_6: #FFFFFF;
+$color_7: #023D4C;
+$color_8: #FFE4CC;
+$color_9: #3F3F3F;
+$color_10: #575757;
+$color_11: #FFF7F0;
+$color_12: #8C8C8C;
+$color_13: #131313;
+$color_14: #EAE5DF;
+$color_15: #A3BBC8;
+$color_16: #181A43;
+$color_17: #7C7C7C;
+$color_18: #00486A;
+$color_19: #D7E5EA;
 
-$dmsans: 'DM Sans', sans-serif;
+
+$extrasmall_fz: 12px;
+$small_fz: 14px;
+$main_fz: 16px;
+$title_fz: 36px;
+$big_fz: 72px;
+$fz_1: 18px;
+
+$dm_sans: 'DM Sans', sans-serif;
 $poppins: 'Poppins', sans-serif;
 $rubik: 'Rubik', sans-serif;
+
+%contain {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+%position_center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
