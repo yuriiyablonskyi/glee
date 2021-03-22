@@ -9,6 +9,10 @@ body {
   max-width: 1800px;
   margin: 0 auto;
   padding: 0 15px;
+
+  &--sm {
+    max-width: 1200px;
+  }
 }
 
 .title {
@@ -27,4 +31,25 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.btn {
+  padding: 24px 98px 22px 28px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s linear;
+
+  &:hover {
+    background-color: $color_7;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    @extend %contain;
+    height: 9px;
+    width: 22px;
+    top: 27px;
+    right: 18px;
+  }
 }

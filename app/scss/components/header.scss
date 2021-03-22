@@ -1,0 +1,111 @@
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 48px 0 45px;
+  }
+}
+
+.menu {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__link {
+    color: $color_1;
+    font-family: $rubik;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.15s linear;
+
+    &:hover {
+      color: $color_4;
+    }
+
+    &:focus {
+      outline: 1px dotted #000;
+    }
+
+    &:active {
+      color: $color_7;
+    }
+  }
+}
+
+.user {
+  display: flex;
+
+  &__btn,
+  &__shopping {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__btn {
+    height: 51px;
+    width: 51px;
+    border-radius: 50%;
+    transition: background-color 0.2s linear;
+
+    &:hover {
+      background-color: $color_4;
+    }
+  }
+
+  &__btn--search {
+    margin-right: 21px;
+    background-color: $color_2;
+  }
+
+  &__btn--menu {
+    background-color: $color_3;
+  }
+
+  &__shopping {
+    background-color: $color_4;
+    width: 89px;
+    height: 50px;
+    transition: background-color 0.2s linear;
+    position: relative;
+
+    &:hover {
+      background-color: $color_2;
+    }
+  }
+
+  &__shopping--one {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      right: 0;
+      height: 32px;
+      width: 1px;
+      background-color: $color_5;
+    }
+  }
+
+  &__shopping--two {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin-right: 18px;
+  }
+
+  &__numbers {
+    padding: 5px;
+    border-radius: 50%;
+    background-color: $color_6;
+    font-size: 10px;
+    position: absolute;
+    top: 4px;
+    right: 25px;
+  }
+}

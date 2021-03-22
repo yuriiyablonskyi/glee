@@ -1,0 +1,121 @@
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+
+  &__item:not(:last-child) {
+    margin-right: 33px;
+  }
+
+  &__btn {
+    font-weight: 700;
+    color: $color_12;
+    transition: color 0.2s linear;
+    cursor: pointer;
+    background-color: transparent;
+
+    &:hover {
+      color: $color_13;
+    }
+  }
+}
+
+.products {
+  margin-top: 65px;
+
+  &__title {
+    margin-bottom: 33px;
+  }
+
+  &__inner {
+    margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    padding: 15px;
+    width: 270px;
+    text-align: center;
+    margin: 0 15px 40px;
+    display: block;
+    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: box-shadow 0.2s linear;
+
+    &:hover .product-card__element {
+      opacity: 1;
+    }
+
+    &:hover {
+      border-radius: 15px;
+      box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.2);
+    }
+  }
+}
+
+.product-card {
+  &__element {
+    position: absolute;
+    @extend %position_center;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__link {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: $color_6;
+    transition: background-color 0.2s linear;
+
+    &:hover {
+      background-color: $color_15;
+    }
+  }
+
+  &__path {
+    fill: $color_15;
+    transition: fill 0.2s linear;
+  }
+
+  &__link:hover .product-card__path {
+    fill: $color_6;
+  }
+
+  &__img {
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  &__heading {
+    font-weight: 500;
+    line-height: 2.2;
+    color: $color_7;
+    display: block;
+  }
+
+  &__price {
+    line-height: 2.2;
+    font-weight: 700;
+    color: $color_3;
+  }
+}
