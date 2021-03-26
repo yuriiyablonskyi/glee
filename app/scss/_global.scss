@@ -3,6 +3,7 @@ body {
   font-size: $main_fz;
   line-height: 1;
   background-color: #ffffff;
+  font-weight: 400;
 }
 
 .container {
@@ -42,6 +43,13 @@ body {
   &:hover {
     background-color: $color_7;
   }
+  &:focus {
+    outline: 1px solid $color_16;
+  }
+
+  &:active {
+    color: $color_7;
+  }
 
   &::before {
     position: absolute;
@@ -51,5 +59,11 @@ body {
     width: 22px;
     top: 27px;
     right: 18px;
+  }
+}
+
+.logo {
+  &:focus {
+    outline: 1px solid $color_16;
   }
 }

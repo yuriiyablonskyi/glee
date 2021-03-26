@@ -26,7 +26,7 @@
     }
 
     &:focus {
-      outline: 1px dotted #000;
+      outline: 1px solid $color_16;
     }
 
     &:active {
@@ -55,6 +55,10 @@
     &:hover {
       background-color: $color_4;
     }
+
+    &:focus {
+      outline: 1px solid $color_16;
+    }
   }
 
   &__btn--search {
@@ -75,6 +79,14 @@
 
     &:hover {
       background-color: $color_2;
+    }
+
+    &:focus {
+      outline: 1px solid $color_16;
+    }
+
+    &:active {
+      color: $color_7;
     }
   }
 
@@ -107,5 +119,13 @@
     position: absolute;
     top: 4px;
     right: 25px;
+  }
+
+  &__icon {
+    fill: $color_20;
+  }
+
+  &__icon--color {
+    fill: $color_6;
   }
 }

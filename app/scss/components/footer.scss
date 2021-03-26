@@ -46,6 +46,14 @@
       color: $color_10;
       text-decoration: underline;
     }
+
+    &:focus {
+      outline: 1px solid $color_16;
+    }
+
+    &:active {
+      color: $color_7;
+    }
   }
 }
 
@@ -60,6 +68,14 @@
 
     &:hover {
       text-decoration: underline;
+    }
+
+    &:focus {
+      outline: 1px solid $color_16;
+    }
+
+    &:active {
+      color: $color_7;
     }
   }
 }
@@ -78,6 +94,14 @@
       outline: 1px solid $color_3;
       background-color: $color_6;
     }
+
+    &:focus {
+      outline: 1px solid $color_16;
+    }
+
+    &:active {
+      color: $color_7;
+    }
   }
 
   &__btn {
@@ -91,6 +115,14 @@
 
     &:hover {
       background-color: $color_1;
+    }
+
+    &:focus {
+      outline: 1px solid $color_16;
+    }
+
+    &:active {
+      color: $color_7;
     }
   }
 }
@@ -127,6 +159,10 @@
 
     &:hover {
       text-decoration: underline;
+    }
+
+    &:focus {
+      outline: 1px solid $color_16;
     }
   }
 }

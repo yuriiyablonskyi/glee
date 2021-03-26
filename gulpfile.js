@@ -5,8 +5,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
-const svgSprite = require("gulp-svg-sprites");
-// var gulp = require('gulp');
+const svgSprite = require("gulp-svg-sprite");
 const browserSync = require('browser-sync').create();
 
 function browsersync() {
@@ -72,18 +71,6 @@ function build() {
 function cleanDist() {
   return del('dist')
 }
-
-// function svgSprites() {
-//   return src('app/images/svg/*.svg')
-//     .pipe(svgSprite({
-//       mode: {
-//         stack: {
-//           sprite: '../sprite.svg'
-//         }
-//       }
-//     }))
-//     .pipe(dest('app/images'));
-// };
 
 function svgSprites() {
   return src('./app/images/svg/**.svg')
