@@ -1,9 +1,17 @@
 body {
-  font-family: $dm_sans;
+  font-family: $rubik;
   font-size: $main_fz;
-  line-height: 1;
   background-color: #ffffff;
   font-weight: 400;
+  color: $color_20;
+  line-height: 1.9;
+}
+
+.page {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .container {
