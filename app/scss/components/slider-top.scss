@@ -2,6 +2,7 @@
   font-family: $rubik;
   background-color: $color_4;
   position: relative;
+  z-index: 0;
 
   &::after {
     position: absolute;
@@ -12,8 +13,9 @@
     width: 33.27%;
     right: 185px;
     top: 100px;
+    z-index: -1;
   }
-  
+
   &__item {
     cursor: pointer;
   }
@@ -81,5 +83,59 @@
   .slick-dots .slick-active button,
   .slick-dots button:hover {
     background-color: $color_6;
+  }
+}
+.advantages {
+  display: flex;
+  justify-content: space-around;
+  background-color: $color_11;
+  font-family: $dm_sans;
+
+  &__item {
+    padding: 40px 0;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: "";
+      height: 50px;
+      width: 60px;
+      @extend %contain;
+      left: -80px;
+      top: 50px;
+    }
+  }
+
+  &__item--one::after {
+    background-image: url("../images/advantages/support.svg");
+  }
+
+  &__item--two::after {
+    background-image: url("../images/advantages/delivery.svg");
+  }
+
+  &__item--three::after {
+    background-image: url("../images/advantages/payment.svg");
+  }
+
+  &__item:not(:last-child)::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 1px;
+    background-color: $color_14;
+    top: 0;
+    right: -145px;
+  }
+
+  &__title {
+    font-weight: 700;
+    line-height: 2.2;
+    color: $color_9;
+  }
+
+  &__text {
+    line-height: 1.9;
+    color: $color_10;
   }
 }

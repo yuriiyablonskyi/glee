@@ -7,6 +7,7 @@ const imagemin = require('gulp-imagemin');
 const del = require('del');
 const svgSprite = require("gulp-svg-sprite");
 const browserSync = require('browser-sync').create();
+const fileinclude = require('gulp-file-include');
 
 function browsersync() {
   browserSync.init({
