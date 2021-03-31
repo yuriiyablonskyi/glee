@@ -1,6 +1,6 @@
 .slider-top {
   font-family: $rubik;
-  background-color: $color_4;
+  background-color: $white_700;
   position: relative;
   z-index: 0;
 
@@ -9,8 +9,8 @@
     content: "";
     background-image: linear-gradient(-90deg, #fff, transparent);
     border-radius: 50%;
-    height: 66.44%;
-    width: 33.27%;
+    height: 60vh;
+    width: 60vh;
     right: 185px;
     top: 100px;
     z-index: -1;
@@ -30,25 +30,25 @@
   }
 
   &__heading {
-    font-size: $big_fz;
-    color: $color_7;
+    font-size: $xxl;
+    color: $blue_500;
     font-weight: 500;
     text-transform: uppercase;
-    @extend %contain;
+    @include contain;
     margin-bottom: 15px;
     line-height: 1;
   }
 
   &__text {
-    font-size: $fz_1;
+    font-size: $l;
     line-height: 1.6;
     margin-bottom: 44px;
-    color: $color_1;
+    color: $blue_600;
   }
 
   &__btn {
-    color: $color_6;
-    background-color: $color_3;
+    color: $white_100;
+    background-color: $gray_700;
 
     &::before {
       background-image: url("../images/slider-top/arrow.svg");
@@ -63,36 +63,38 @@
     z-index: 0;
     left: 50%;
     transform: translateX(-50%);
-  }
 
-  .slick-dots button {
-    font-size: 10px;
-    font-family: $rubik;
-    height: 29px;
-    width: 29px;
-    border-radius: 50%;
-    background-color: $color_8;
-    cursor: pointer;
-    transition: background-color 0.2s linear;
-  }
+    button {
+      font-size: 10px;
+      font-family: $rubik;
+      height: 29px;
+      width: 29px;
+      border-radius: 50%;
+      background-color: $white_500;
+      cursor: pointer;
+      transition: background-color 0.2s linear;
+    }
 
-  .slick-dots li:not(:last-child) {
-    margin-right: 10px;
-  }
+    li:not(:last-child) {
+      margin-right: 10px;
+    }
 
-  .slick-dots .slick-active button,
-  .slick-dots button:hover {
-    background-color: $color_6;
+    .slick-active button,
+    button:hover {
+      background-color: $white_100;
+    }
   }
 }
+
 .advantages {
   display: flex;
   justify-content: space-around;
-  background-color: $color_11;
+  background-color: $white_400;
   font-family: $dm_sans;
+  min-height: 170px;
 
   &__item {
-    padding: 40px 0;
+    padding: 40px 0 0 72px;
     position: relative;
 
     &:after {
@@ -100,42 +102,40 @@
       content: "";
       height: 50px;
       width: 60px;
-      @extend %contain;
-      left: -80px;
+      @include contain;
+      left: -20px;
       top: 50px;
     }
-  }
 
-  &__item--one::after {
-    background-image: url("../images/advantages/support.svg");
-  }
+    &--one::after {
+      background-image: url("../images/advantages/support.svg");
+    }
+    &--two::after {
+      background-image: url("../images/advantages/delivery.svg");
+    }
+    &--three::after {
+      background-image: url("../images/advantages/payment.svg");
+    }
 
-  &__item--two::after {
-    background-image: url("../images/advantages/delivery.svg");
-  }
-
-  &__item--three::after {
-    background-image: url("../images/advantages/payment.svg");
-  }
-
-  &__item:not(:last-child)::before {
-    position: absolute;
-    content: "";
-    height: 100%;
-    width: 1px;
-    background-color: $color_14;
-    top: 0;
-    right: -145px;
+    &:not(:last-child)::before {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 1px;
+      background-color: $white_300;
+      top: 0;
+      right: -145px;
+    }
   }
 
   &__title {
     font-weight: 700;
     line-height: 2.2;
-    color: $color_9;
+    color: $gray_100;
   }
 
   &__text {
     line-height: 1.9;
-    color: $color_10;
+    color: $gray_200;
   }
 }

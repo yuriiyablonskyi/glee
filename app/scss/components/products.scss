@@ -1,8 +1,7 @@
-
 .filter {
   display: flex;
   justify-content: center;
-  margin-bottom: 80px;
+  margin-bottom: 70px;
 
   &__item:not(:last-child) {
     margin-right: 33px;
@@ -10,15 +9,19 @@
 
   &__btn {
     font-weight: 700;
-    color: $color_12;
+    color: $gray_300;
     transition: color 0.2s linear;
     cursor: pointer;
     background-color: transparent;
     font-family: $dm_sans;
 
     &:hover {
-      color: $color_13;
+      color: $blue_100;
     }
+  }
+
+  .mixitup-control-active {
+    color: $blue_100;
   }
 }
 
@@ -26,42 +29,44 @@
   margin-top: 65px;
 
   &__title {
-    margin-bottom: 33px;
+    margin-bottom: 25px;
   }
 
   &__inner {
-    margin: 0 -15px;
+    margin: 0 -15px 145px;
     display: flex;
     flex-wrap: wrap;
   }
 
   &__item {
-    padding: 15px;
-    width: 270px;
-    text-align: center;
     margin: 0 15px 40px;
-    display: block;
-    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
-    border-radius: 10px;
-    position: relative;
-    cursor: pointer;
-    transition: box-shadow 0.2s linear;
-
-    &:hover .product-card__element {
-      opacity: 1;
-    }
-
-    &:hover {
-      border-radius: 15px;
-      box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.2);
-    }
   }
 }
 
 .product-card {
+  padding: 15px;
+  width: 270px;
+  text-align: center;
+  display: block;
+  box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.2s linear;
+  background-color: $gray_800;
+
+  &:hover {
+    border-radius: 15px;
+    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.2);
+  }
+
+  &:hover .product-card__element {
+    opacity: 1;
+  }
+
   &__element {
     position: absolute;
-    @extend %position_center;
+    @include pos_center;
     display: flex;
     justify-content: center;
     opacity: 0;
@@ -82,41 +87,104 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background-color: $color_6;
+    background-color: $white_100;
     transition: background-color 0.2s linear;
 
     &:hover {
-      background-color: $color_15;
+      background-color: $gray_600;
+    }
+
+    &:hover .product-card__icon {
+      fill: $white_100;
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 15px 1px $black_100;
     }
   }
 
   &__icon {
-    fill: $color_15;
+    fill: $gray_600;
     transition: fill 0.3s linear;
-  }
-  &__link:hover .product-card__icon {
-    fill: $color_6;
   }
 
   &__img {
     height: 210px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 63px;
   }
 
   &__heading {
-    font-weight: 500;
     line-height: 2.2;
-    color: $color_7;
+    color: $blue_500;
     display: block;
+    font-weight: 500;
+    font-size: $m;
   }
 
   &__price {
     line-height: 2.2;
     font-weight: 700;
-    color: $color_3;
+    color: $gray_700;
+    font-family: $rubik;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+}
+
+.lamp {
+  display: flex;
+  margin-bottom: 105px;
+}
+
+.lamp-card {
+  background-color: $white_900;
+  width: 100%;
+  padding: 80px 140px;
+  display: flex;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__img {
+    margin-top: -175px;
+    margin-right: 50px;
+    max-width: 230px;
+  }
+
+  &__title {
+    max-width: 350px;
+    color: $blue_500;
+    font-size: $md;
+    font-family: $dm_sans;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    color: $blue_500;
+    line-height: 1.8;
+    margin-bottom: 50px;
+  }
+
+  &__btn {
+    border-radius: 5px;
+    border: 1px solid $blue_700;
+    color: $blue_700;
+
+    &::before {
+      background-image: url("../images/products/arrow.svg");
+    }
+
+    &:hover {
+      background-color: $white_100;
+      border-color: $white_900;
+    }
   }
 }

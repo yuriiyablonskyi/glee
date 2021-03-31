@@ -35,6 +35,7 @@ function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.js',
+    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
     'node_modules/mixitup/dist/mixitup.js',
     'app/js/main.js'
   ])
@@ -85,7 +86,15 @@ function svgSprites() {
   .pipe(dest('./app/images'))
 }
 
-
+function fileInclude() {
+  gulp.src('./app/html/*.html')
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(concat('page.html'))
+    .pipe(gulp.dest('app/'));
+};
 
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
@@ -101,6 +110,7 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
 exports.svgSprites = svgSprites;
+exports.fileInclude = fileInclude;
 
-exports.default = parallel(styles, scripts, svgSprites, browsersync, watching);
+exports.default = parallel(styles, scripts, svgSprites, fileinclude, browsersync, watching);
 

@@ -1,0 +1,125 @@
+.design {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px 42px;
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__item {
+    margin: 0 15px 35px;
+  }
+}
+// когда max-width: 370px; width: 100%;
+// в обычном состоянии все ок но когда нажимаю на фильтр и остаеться 2 елемента они в столбик встают
+// помогает только фикс ширина для карточек
+.design-card {
+  width: 370px;
+  font-family: $dm_sans;
+  font-weight: 700;
+  line-height: 1.2;
+  background-color: $gray_800;
+  padding: 40px 35px 10px;
+  @include contain;
+  position: relative;
+  z-index: 0;
+
+  &__img {
+    @include pos_full;
+    z-index: -1;
+  }
+
+  &__link {
+    @include pos_full;
+    transition: box-shadow 0.2s linear;
+
+    &:hover {
+      box-shadow: 0 0  12px 4px $gray_700;
+      border-radius: 5px;
+    }
+  }
+
+  &__title {
+    font-size: $md_l;
+    color: $blue_100;
+    max-width: 200px;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-size: $m;
+    color: $gray_700;
+    margin-bottom: 120px;
+    display: block;
+  }
+}
+
+// правильно ли написал beforе в этом блоке? или в другом месте псевдоелементы прописать?
+.video {
+  @include cover;
+  min-height: 500px;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 110px;
+
+  &:before,
+  &__link {
+    @include pos_full;
+  }
+
+  &:before {
+    content: "";
+    background-color: rgba($black_100, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s linear;
+  }
+
+  &:hover:before {
+    opacity: 1;
+  }
+
+  &:hover &__icon {
+    fill: $blue_600;
+  }
+
+  &:hover &__link:before {
+    fill: $blue_500;
+    box-shadow: 0 0 1px 28px rgba($gray_700, 0.4);
+  }
+
+  &:hover &__link:after {
+    opacity: 1;
+    box-shadow: 0 0 1px 15px rgba($gray_700, 0.8);
+  }
+
+  &__link {
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      @include pos_center;
+      height: 98px;
+      width: 98px;
+      border-radius: 50%;
+      transition: box-shadow 0.3s linear;
+    }
+
+    &:before {
+      background-color: $gray_700;
+      box-shadow: 0 0 0 14px rgba($gray_700, 0.4);
+    }
+
+    &:after {
+      box-shadow: 0 $gray_700;
+      opacity: 0;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    @include pos_center;
+    fill: $white_100;
+    transition: fill 0.3s linear;
+  }
+}

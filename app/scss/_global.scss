@@ -1,13 +1,13 @@
 body {
   font-family: $rubik;
-  font-size: $main_fz;
+  font-size: $m;
   background-color: #ffffff;
   font-weight: 400;
-  color: $color_20;
+  color: $blue_300;
   line-height: 1.9;
 }
 
-.page {
+.wrapper {
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -25,8 +25,12 @@ body {
 }
 
 .title {
-  font-size: $title_fz;
   text-align: center;
+  font-size: $xl;
+  color: $black_100;
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: $dm_sans;
 }
 
 .sr-only {
@@ -48,21 +52,22 @@ body {
   position: relative;
   transition: background-color 0.2s linear;
 
-  &:hover {
-    background-color: $color_7;
-  }
   &:focus {
-    outline: 1px solid $color_16;
+    outline: 1px solid $blue_200;
+  }
+
+  &:hover {
+    background-color: $blue_500;
   }
 
   &:active {
-    color: $color_7;
+    color: $blue_500;
   }
 
   &::before {
     position: absolute;
     content: "";
-    @extend %contain;
+    @include contain;
     height: 9px;
     width: 22px;
     top: 27px;
@@ -72,6 +77,6 @@ body {
 
 .logo {
   &:focus {
-    outline: 1px solid $color_16;
+    outline: 1px solid $blue_200;
   }
 }

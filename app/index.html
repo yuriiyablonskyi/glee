@@ -12,14 +12,14 @@
 </head>
 
 <body>
-  <div class="page">
+  <div class="wrapper">
 
     <header class="header">
       <div class="container">
         <nav class="header__inner">
 
           <a class="logo" href="/">
-            <img class="logo__icon" src="images/logo.svg" alt="logo icon">
+            <img class="logo__icon" src="images/logo.png" alt="logo icon">
           </a>
 
           <ul class="menu">
@@ -77,12 +77,13 @@
 
         </nav>
       </div>
-      <h1 class="sr-only">h1</h1>
+      <h1 class="sr-only">slider</h1>
     </header>
 
     <main>
       <div class="container">
         <section class="slider-top">
+          <h2 class="sr-only">slider</h2>
           <ul class="slider-top__inner">
 
             <li class="slider-top__item">
@@ -156,8 +157,8 @@
               </div>
             </li>
           </ul>
+        </section>
       </div>
-      </section>
 
       <section class="products">
         <div class="container container--sm">
@@ -165,19 +166,19 @@
 
           <ul class="filter">
             <li class="filter__item">
-              <button class="filter__btn" type="button" data-filter="all">All</button>
+              <button class="filter__btn filter__btn1" type="button" data-filter="all">All</button>
             </li>
             <li class="filter__item">
-              <button class="filter__btn" type="button" data-filter=".furnitures">Furnitures</button>
+              <button class="filter__btn filter__btn1" type="button" data-filter=".furnitures">Furnitures</button>
             </li>
             <li class="filter__item">
-              <button class="filter__btn" type="button" data-filter=".chairs">Chairs</button>
+              <button class="filter__btn filter__btn1" type="button" data-filter=".chairs">Chairs</button>
             </li>
             <li class="filter__item">
-              <button class="filter__btn" type="button" data-filter=".lighting">Lighting</button>
+              <button class="filter__btn filter__btn1" type="button" data-filter=".lighting">Lighting</button>
             </li>
             <li class="filter__item">
-              <button class="filter__btn" type="button" data-filter=".deco">Deco</button>
+              <button class="filter__btn filter__btn1" type="button" data-filter=".deco">Deco</button>
             </li>
           </ul>
 
@@ -194,6 +195,7 @@
                   </li>
                   <li class="product-card__item">
                     <button class="product-card__link" type="submit">
+                      <span class="sr-only">basket</span>
                       <svg class="product-card__icon" width="22" height="20">
                         <use xlink:href="images/sprite.svg#basket"></use>
                       </svg>
@@ -201,6 +203,7 @@
                   </li>
                   <li class="product-card__item">
                     <button class="product-card__link" type="submit">
+                      <span class="sr-only">favorites</span>
                       <svg class="product-card__icon" width="22" height="20">
                         <use xlink:href="images/sprite.svg#favorites1"></use>
                       </svg>
@@ -227,6 +230,7 @@
                   </li>
                   <li class="product-card__item">
                     <button class="product-card__link" type="submit">
+                      <span class="sr-only">basket</span>
                       <svg class="product-card__icon" width="22" height="20">
                         <use xlink:href="images/sprite.svg#basket"></use>
                       </svg>
@@ -234,6 +238,7 @@
                   </li>
                   <li class="product-card__item">
                     <button class="product-card__link" type="submit">
+                      <span class="sr-only">favorites</span>
                       <svg class="product-card__icon" width="22" height="20">
                         <use xlink:href="images/sprite.svg#favorites1"></use>
                       </svg>
@@ -260,6 +265,7 @@
                   </li>
                   <li class="product-card__item">
                     <button class="product-card__link" type="submit">
+                      <span class="sr-only">basket</span>
                       <svg class="product-card__icon" width="22" height="20">
                         <use xlink:href="images/sprite.svg#basket"></use>
                       </svg>
@@ -267,6 +273,7 @@
                   </li>
                   <li class="product-card__item">
                     <button class="product-card__link" type="submit">
+                      <span class="sr-only">favorites</span>
                       <svg class="product-card__icon" width="22" height="20">
                         <use xlink:href="images/sprite.svg#favorites1"></use>
                       </svg>
@@ -293,6 +300,7 @@
                   </li>
                   <li class="product-card__item">
                     <button class="product-card__link" type="submit">
+                      <span class="sr-only">basket</span>
                       <svg class="product-card__icon" width="22" height="20">
                         <use xlink:href="images/sprite.svg#basket"></use>
                       </svg>
@@ -300,6 +308,7 @@
                   </li>
                   <li class="product-card__item">
                     <button class="product-card__link" type="submit">
+                      <span class="sr-only">favorites</span>
                       <svg class="product-card__icon" width="22" height="20">
                         <use xlink:href="images/sprite.svg#favorites1"></use>
                       </svg>
@@ -326,6 +335,7 @@
                   </li>
                   <li class="product-card__item">
                     <button class="product-card__link" type="submit">
+                      <span class="sr-only">basket</span>
                       <svg class="product-card__icon" width="22" height="20">
                         <use xlink:href="images/sprite.svg#basket"></use>
                       </svg>
@@ -333,6 +343,7 @@
                   </li>
                   <li class="product-card__item">
                     <button class="product-card__link" type="submit">
+                      <span class="sr-only">favorites</span>
                       <svg class="product-card__icon" width="22" height="20">
                         <use xlink:href="images/sprite.svg#favorites1"></use>
                       </svg>
@@ -359,6 +370,7 @@
                   </li>
                   <li class="product-card__item">
                     <button class="product-card__link" type="submit">
+                      <span class="sr-only">basket</span>
                       <svg class="product-card__icon" width="22" height="20">
                         <use xlink:href="images/sprite.svg#basket"></use>
                       </svg>
@@ -366,6 +378,7 @@
                   </li>
                   <li class="product-card__item">
                     <button class="product-card__link" type="submit">
+                      <span class="sr-only">favorites</span>
                       <svg class="product-card__icon" width="22" height="20">
                         <use xlink:href="images/sprite.svg#favorites1"></use>
                       </svg>
@@ -392,6 +405,7 @@
                   </li>
                   <li class="product-card__item">
                     <button class="product-card__link" type="submit">
+                      <span class="sr-only">basket</span>
                       <svg class="product-card__icon" width="22" height="20">
                         <use xlink:href="images/sprite.svg#basket"></use>
                       </svg>
@@ -399,6 +413,7 @@
                   </li>
                   <li class="product-card__item">
                     <button class="product-card__link" type="submit">
+                      <span class="sr-only">favorites</span>
                       <svg class="product-card__icon" width="22" height="20">
                         <use xlink:href="images/sprite.svg#favorites1"></use>
                       </svg>
@@ -425,6 +440,7 @@
                   </li>
                   <li class="product-card__item">
                     <button class="product-card__link" type="submit">
+                      <span class="sr-only">basket</span>
                       <svg class="product-card__icon" width="22" height="20">
                         <use xlink:href="images/sprite.svg#basket"></use>
                       </svg>
@@ -432,6 +448,7 @@
                   </li>
                   <li class="product-card__item">
                     <button class="product-card__link" type="submit">
+                      <span class="sr-only">favorites</span>
                       <svg class="product-card__icon" width="22" height="20">
                         <use xlink:href="images/sprite.svg#favorites1"></use>
                       </svg>
@@ -446,25 +463,256 @@
               </article>
             </li>
           </ul>
-      </section>
-  </div>
-  </main>
+        </div>
+<!-- не сходиться по pixel perfect -->
+        <div class="container">
+          <ul class="lamp">
+            <li class="lamp-card">
+              <img class="lamp-card__img" src="images/products/lamp1.png" alt="lamp">
+              <div class="lamp-card__content">
+                <h3 class="lamp-card__title">Mirum Notare Tellus</h3>
+                <div class="lamp-card__text">
+                  <p>LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight</p>
+                </div>
+                <a class="btn lamp-card__btn" href="/">View More</a>
+              </div>
+            </li>
 
-  <footer class="footer">
-    <div class="container container--sm">
-      <section>
-        <h2 class="sr-only">contact</h2>
-        <div class="footer__inner">
+            <li class="lamp-card">
+              <img class="lamp-card__img" src="images/products/lamp2.png" alt="lamp">
+              <div class="lamp-card__content">
+                <h3 class="lamp-card__title">Malesuada Tempor Euismod</h3>
+                <div class="lamp-card__text">
+                  <p>50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight</p>
+                </div>
+                <a class="btn lamp-card__btn" href="/">View More</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="design">
+        <div class="container container--sm">
+          <h2 class="title design__title">New Design</h2>
+          <ul class="filter">
+            <li class="filter__item">
+              <button class="filter__btn filter__btn2" type="button" data-filter="all">All</button>
+            </li>
+            <li class="filter__item">
+              <button class="filter__btn filter__btn2" type="button"
+                data-filter=".design_furnitures">Furnitures</button>
+            </li>
+            <li class="filter__item">
+              <button class="filter__btn filter__btn2" type="button" data-filter=".design_chairs">Chairs</button>
+            </li>
+            <li class="filter__item">
+              <button class="filter__btn filter__btn2" type="button" data-filter=".design_lighting">Lighting</button>
+            </li>
+            <li class="filter__item">
+              <button class="filter__btn filter__btn2" type="button" data-filter=".design_deco">Deco</button>
+            </li>
+          </ul>
+
+          <ul class="design">
+            <li class="design__item mix design_lighting">
+              <article class="design-card">
+                <img class="design-card__img" src="images/design/1.jpg" alt="">
+                <a class="design-card__link" href="/"></a>
+                <h3 class="design-card__title">Beat Flat Pendant Black</h3>
+                <span class="design-card__text">Classic</span>
+              </article>
+            </li>
+
+            <li class="design__item mix design_deco">
+              <article class="design-card">
+                <img class="design-card__img" src="images/design/2.jpg" alt="">
+                <a class="design-card__link" href="/"></a>
+                <h3 class="design-card__title">Lampe Sur Pieds Bamboo</h3>
+                <span class="design-card__text">Classic</span>
+              </article>
+            </li>
+
+            <li class="design__item mix design_furnitures">
+              <article class="design-card">
+                <img class="design-card__img" src="images/design/3.jpg" alt="">
+                <a class="design-card__link" href="/"></a>
+                <h3 class="design-card__title">Rattan Rocking Chair</h3>
+                <span class="design-card__text">Classic</span>
+              </article>
+            </li>
+
+            <li class="design__item mix design_lighting">
+              <article class="design-card">
+                <img class="design-card__img" src="images/design/4.jpg" alt="">
+                <a class="design-card__link" href="/"></a>
+                <h3 class="design-card__title">Rattan Rocking Chair</h3>
+                <span class="design-card__text">Classic</span>
+              </article>
+            </li>
+
+            <li class="design__item mix design_furnitures">
+              <article class="design-card">
+                <img class="design-card__img" src="images/design/5.jpg" alt="">
+                <a class="design-card__link" href="/"></a>
+                <h3 class="design-card__title">Rattan Rocking Chair</h3>
+                <span class="design-card__text">Classic</span>
+              </article>
+            </li>
+
+            <li class="design__item mix design_chairs">
+              <article class="design-card">
+                <img class="design-card__img" src="images/design/6.jpg" alt="">
+                <a class="design-card__link" href="/"></a>
+                <h3 class="design-card__title">Lampe Sur Pieds Bamboo</h3>
+                <span class="design-card__text">Classic</span>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="video" style="background-image: url('images/video-bg.jpg');">
+        <a class="video__link" href="https://youtu.be/0EE-u2Ns9G0" data-fancybox>
+          <svg class="video__icon" width="22px" height="25px">
+            <use xlink:href="images/sprite.svg#video-play"></use>
+          </svg>
+        </a>
+      </div>
+
+      <section class="articles">
+        <div class="container container--sm">
+          <div class="articles__heading">
+            <h2 class="title articles__title">Our Insights & Articles</h2>
+            <a class="articles__link" href="/">View All</a>
+          </div>
+          <ul class="articles__list">
+            <li class="articles__item">
+              <article class="articles-card">
+                <a class="articles-card__link" target="_blank" href="http://localhost:3000/"></a>
+                <div class="articles-card__images">
+                  <img class="articles-card__img" src="images/articles/1.jpg" alt="">
+                  <span class="articles-card__span">news</span>
+                </div>
+                <div class="articles-card__description">
+                  <p class="articles-card__text">Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                </div>
+                <div class="articles-card__info">
+                  <span class="articles-card__date">28 january, 2020</span>
+                  <span class="articles-card__author">by admin</span>
+                </div>
+              </article>
+            </li>
+
+            <li class="articles__item">
+              <article class="articles-card">
+                <a class="articles-card__link" target="_blank" href="http://localhost:3000/"></a>
+                <div class="articles-card__images">
+                  <img class="articles-card__img" src="images/articles/2.jpg" alt="">
+                  <span class="articles-card__span">news</span>
+                </div>
+                <div class="articles-card__description">
+                  <p class="articles-card__text">Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                </div>
+                <div class="articles-card__info">
+                  <span class="articles-card__date">28 january, 2020</span>
+                  <span class="articles-card__author">by admin</span>
+                </div>
+              </article>
+            </li>
+
+            <li class="articles__item">
+              <article class="articles-card">
+                <a class="articles-card__link" target="_blank" href="http://localhost:3000/"></a>
+                <div class="articles-card__images">
+                  <img class="articles-card__img" src="images/articles/3.jpg" alt="">
+                  <span class="articles-card__span">news</span>
+                </div>
+                <div class="articles-card__description">
+                  <p class="articles-card__text">Rncididunt ut labore et dolore magna aliqua. Ut enim</p>
+                </div>
+                <div class="articles-card__info">
+                  <span class="articles-card__date">28 january, 2020</span>
+                  <span class="articles-card__author">by admin</span>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="slider-partners">
+        <div class="container container--sm">
+          <ul class="slider-partners__list">
+            <li class="slider-partners__item">
+              <a class="slider-partners__link" href="/">
+                <img class="slider-partners__img" src="images/slider-partners/1.png" alt="partners">
+              </a>
+            </li>
+            <li class="slider-partners__item">
+              <a class="slider-partners__link" href="/">
+                <img class="slider-partners__img" src="images/slider-partners/2.png" alt="partners">
+              </a>
+            </li>
+            <li class="slider-partners__item">
+              <a class="slider-partners__link" href="/">
+                <img class="slider-partners__img" src="images/slider-partners/3.png" alt="partners">
+              </a>
+            </li>
+            <li class="slider-partners__item">
+              <a class="slider-partners__link" href="/">
+                <img class="slider-partners__img" src="images/slider-partners/4.png" alt="partners">
+              </a>
+            </li>
+            <li class="slider-partners__item">
+              <a class="slider-partners__link" href="/">
+                <img class="slider-partners__img" src="images/slider-partners/5.png" alt="partners">
+              </a>
+            </li>
+            <li class="slider-partners__item">
+              <a class="slider-partners__link" href="/">
+                <img class="slider-partners__img" src="images/slider-partners/1.png" alt="partners">
+              </a>
+            </li>
+            <li class="slider-partners__item">
+              <a class="slider-partners__link" href="/">
+                <img class="slider-partners__img" src="images/slider-partners/2.png" alt="partners">
+              </a>
+            </li>
+            <li class="slider-partners__item">
+              <a class="slider-partners__link" href="/">
+                <img class="slider-partners__img" src="images/slider-partners/3.png" alt="partners">
+              </a>
+            </li>
+            <li class="slider-partners__item">
+              <a class="slider-partners__link" href="/">
+                <img class="slider-partners__img" src="images/slider-partners/4.png" alt="partners">
+              </a>
+            </li>
+            <li class="slider-partners__item">
+              <a class="slider-partners__link" href="/">
+                <img class="slider-partners__img" src="images/slider-partners/5.png" alt="partners">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container container--sm">
+        <section class="footer__inner">
+          <h2 class="sr-only">contact</h2>
 
           <div class="footer__item">
             <a class="logo footer__logo" href="/">
-              <img class="logo__icon" src="images/logo.svg" alt="logo icon">
+              <img class="logo__icon" src="images/logo.png" alt="logo icon">
             </a>
             <address class="address">
-              <div class="address__item">
+              <a class="address__item" href="/">
                 <p>ADDRESS: 4772 Wines Lane</p>
                 <p>Houston, TX 77032</p>
-              </div>
+              </a>
               <a class="address__item" href="tel:+8323475843">Telephone: +832-347-5843</a>
               <a class="address__item" href="mailto:contact@glee.com">Email: contact@Glee.com</a>
             </address>
@@ -520,31 +768,27 @@
               <button class="form__btn" type="submit">Subscribe</button>
             </form>
           </div>
-
-        </div>
+        </section>
 
         <div class="copy">
-          <span class="copy__text">
-            <©2020 CopyRight Example. All rights reserved.</span>
-              <ul class="menu footer__menu">
-                <li class="menu__item">
-                  <a class="menu__link" href="/">Home</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="/">About</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="/">Blog</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="/">Contact</a>
-                </li>
-              </ul>
+          <span class="copy__text">©2020 CopyRight Example. All rights reserved.</span>
+          <ul class="menu footer__menu">
+            <li class="menu__item">
+              <a class="menu__link" href="/">Home</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="/">About</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="/">Blog</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="/">Contact</a>
+            </li>
+          </ul>
         </div>
-      </section>
-    </div>
-  </footer>
-
+      </div>
+    </footer>
   </div>
   <script src="js/main.min.js"></script>
   <script src="js/main.js"></script>
