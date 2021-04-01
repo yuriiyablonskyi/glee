@@ -3,7 +3,6 @@
   margin-bottom: 96px;
 
   &__list {
-    height: 250px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -11,9 +10,18 @@
   
   &__item {
     max-width: 150px;
+    height: 250px;
     display: flex !important;
     align-items: center;
     justify-content: center;
+  }
+
+  .slick-slide {
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 
@@ -204,7 +212,7 @@
   color: $gray_400;
   margin: 36px 0 40px;
   position: relative;
-
+  
   &:before {
     position: absolute;
     content: "";
