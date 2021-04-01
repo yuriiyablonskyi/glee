@@ -91,8 +91,8 @@
         color: $gray_500;
         line-height: 2.2;
         font-weight: 400;
-
-        &:before {
+        
+        &__link:not(:last-child):after {
           position: absolute;
           content: "";
           width: 3px;
