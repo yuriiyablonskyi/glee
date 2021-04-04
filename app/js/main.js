@@ -14,14 +14,14 @@ $(function(){
   mixitup('.products__inner', {
     selectors: {
       target: '.products__item',
-      control: '.filter__btn1'
+      control: '.products__filter .filter__btn'
     }
   });
   
   mixitup('.design', {
     selectors: {
       target: '.design__item',
-      control: '.filter__btn2'
+      control: '.design__filter .filter__btn'
     }
   });
 })

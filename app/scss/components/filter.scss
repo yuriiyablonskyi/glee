@@ -1,0 +1,38 @@
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+
+  &__item:not(:last-child) {
+    margin-right: 25px;
+  }
+
+  &__btn {
+    font-weight: 700;
+    color: $gray_300;
+    transition: color 0.2s linear;
+    cursor: pointer;
+    background-color: transparent;
+    font-family: $dm_sans;
+    padding: 0 4px;
+    text-overflow: clip;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+
+    &:hover {
+      color: $blue_100;
+    }
+
+    &:focus {
+      box-shadow: 0 0 12px 4px $gray_700;
+      outline: none;
+      border-radius: 8px;
+    }
+
+    .mixitup-control-active {
+      color: $blue_100;
+    }
+  }
+}

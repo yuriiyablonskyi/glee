@@ -22,9 +22,9 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -15px 80px;
+    margin-right: -20px;
   }
-  
+
   &__link {
     color: $black_200;
     font-weight: bold;
@@ -46,12 +46,12 @@
       transition: transform 0.2s linear;
     }
     
-    &:hover:after {
-      transform: scale(1.5) translateX(10px);
-    }
-    
     &:focus {
       text-decoration: underline;
+    }
+
+    &:hover:after {
+      transform: scale(1.5) translateX(10px);
     }
     
     &:hover {
@@ -62,115 +62,9 @@
       color: $black_100;
     }
   }
-  
-  &__list {
-    display: flex;
-    margin: 0 -15px;
-  }
-  
+
   &__item {
-    margin: 0 15px 15px;
-  }
-}
-
-.articles-card {
-  width: 370px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: $white_100;
-  border-radius: 5px;
-  position: relative;
-
-  &__link {
-    @include pos_full;
-  }
-
-  &__images {
-    position: relative;
-    margin-bottom: 32px;
-  }
-  
-  &__img {
-    max-width: 100%;
-  }
-
-  &__span {
-    font-size: $s;
-    color: $white_100;
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 1.4;
-    padding: 6px 30px;
-    background-color: $gray_600;
-    border-radius: 12px;
-    position: absolute;
-    bottom: -14px;
-    left: 30px;
-  }
-
-  &__description,
-  &__info {
-    padding: 0 30px;
-  }
-
-  &__text {
-    font-size: $l;
-    color: $blue_200;
-    line-height: 1.2;
-    font-weight: 500;
-    margin-bottom: 15px;
-    max-width: 300px;
-  }
-
-  &__info {
-    font-size: $xs;
-    color: $black_300;
-    line-height: 2.5;
-    font-family: $myriadpro;
-    text-transform: uppercase;
-    margin-top: auto;
-    padding-top: 10px;
-    margin-bottom: 15px;
-    position: relative;
-
-    &:before {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 30px;
-      right: 30px;
-      height: 1px;
-      background-color: $black_900;
-    }
-  }
-
-  &__date {
-    margin-right: 25px;
-  }
-
-  &__date,
-  &__author {
-    padding-left: 16px;
-    position: relative;
-  }
-
-  &__date:before,
-  &__author:before {
-    position: absolute;
-    content: "";
-    top: 2px;
-    left: 0;
-    @include cover;
-    height: 9px;
-    width: 10px;
-  }
-
-  &__date:before {
-    background-image: url(../images/articles/calendar.svg);
-  }
-
-  &__author:before {
-    background-image: url(../images/articles/user.svg);
+    width: calc(100% /3);
+    margin-bottom: 17px;
   }
 }

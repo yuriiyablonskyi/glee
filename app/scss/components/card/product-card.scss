@@ -1,0 +1,107 @@
+.product-card {
+  padding: 15px;
+  max-width: 270px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.2s linear;
+  background-color: $gray_800;
+
+  &:hover {
+    border-radius: 15px;
+    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.2);
+  }
+
+  &:hover .product-card__element {
+    opacity: 1;
+  }
+
+  &__element {
+    position: absolute;
+    @include pos_center;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__link {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: $white_100;
+    transition: background-color 0.2s linear;
+
+    &:hover {
+      background-color: $gray_600;
+    }
+
+    &:hover .product-card__icon {
+      fill: $white_100;
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 15px 1px $black_100;
+    }
+  }
+
+  &__icon {
+    fill: $gray_600;
+    transition: fill 0.3s linear;
+  }
+
+  &__img {
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 63px;
+
+    img {
+      max-height: 100%;
+    }
+  }
+
+  &__heading {
+    line-height: 2.2;
+    color: $blue_500;
+    display: block;
+    font-weight: 500;
+    font-size: $m;
+    text-overflow: clip;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+  }
+
+  &__price {
+    line-height: 2.2;
+    font-weight: 700;
+    color: $gray_700;
+    font-family: $rubik;
+    display: inline-block;
+    margin-bottom: 8px;
+    text-overflow: clip;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+  }
+}

@@ -19,7 +19,7 @@
         <nav class="header__inner">
 
           <a class="logo" href="/">
-            <img class="logo__icon" src="images/logo.png" alt="logo icon">
+            <img class="logo__icon" src="images/logo.png" alt="logo icon" width="145" height="38">
           </a>
 
           <ul class="menu">
@@ -77,7 +77,7 @@
 
         </nav>
       </div>
-      <h1 class="sr-only">slider</h1>
+      <h1 class="sr-only">Glee | Smart and trendy</h1>
     </header>
 
     <main>
@@ -96,7 +96,7 @@
                     </div>
                     <a class="btn slider-top__btn" href="/">Shop Now</a>
                   </div>
-                  <img class="slider-top__img" src="images/slider-top/product.png" alt="product">
+                  <img class="slider-top__img" src="images/slider-top/product.png" alt="product" height="270px" width="636">
                 </div>
               </div>
             </li>
@@ -111,7 +111,7 @@
                     </div>
                     <a class="btn slider-top__btn" href="/">Shop Now</a>
                   </div>
-                  <img class="slider-top__img" src="images/slider-top/product.png" alt="product">
+                  <img class="slider-top__img" src="images/slider-top/product.png" alt="product" height="270px" width="636">
                 </div>
               </div>
             </li>
@@ -126,7 +126,7 @@
                     </div>
                     <a class="btn slider-top__btn" href="/">Shop Now</a>
                   </div>
-                  <img class="slider-top__img" src="images/slider-top/product.png" alt="product">
+                  <img class="slider-top__img" src="images/slider-top/product.png" alt="product" height="270px" width="636">
                 </div>
               </div>
             </li>
@@ -164,21 +164,21 @@
         <div class="container container--sm">
           <h2 class="title products__title">Products of the week</h2>
 
-          <ul class="filter">
+          <ul class="filter products__filter">
             <li class="filter__item">
-              <button class="filter__btn filter__btn1" type="button" data-filter="all">All</button>
+              <button class="filter__btn" type="button" data-filter="all">All</button>
             </li>
             <li class="filter__item">
-              <button class="filter__btn filter__btn1" type="button" data-filter=".furnitures">Furnitures</button>
+              <button class="filter__btn" type="button" data-filter=".furnitures">Furnitures</button>
             </li>
             <li class="filter__item">
-              <button class="filter__btn filter__btn1" type="button" data-filter=".chairs">Chairs</button>
+              <button class="filter__btn" type="button" data-filter=".chairs">Chairs</button>
             </li>
             <li class="filter__item">
-              <button class="filter__btn filter__btn1" type="button" data-filter=".lighting">Lighting</button>
+              <button class="filter__btn" type="button" data-filter=".lighting">Lighting</button>
             </li>
             <li class="filter__item">
-              <button class="filter__btn filter__btn1" type="button" data-filter=".deco">Deco</button>
+              <button class="filter__btn" type="button" data-filter=".deco">Deco</button>
             </li>
           </ul>
 
@@ -468,7 +468,7 @@
         <div class="container">
           <ul class="lamp">
             <li class="lamp-card">
-              <img class="lamp-card__img" src="images/products/lamp1.png" alt="lamp">
+              <img class="lamp-card__img" src="images/products/lamp1.png" alt="lamp" height="406" width="230">
               <div class="lamp-card__content">
                 <h3 class="lamp-card__title">Mirum Notare Tellus</h3>
                 <div class="lamp-card__text">
@@ -479,7 +479,7 @@
             </li>
 
             <li class="lamp-card">
-              <img class="lamp-card__img" src="images/products/lamp2.png" alt="lamp">
+              <img class="lamp-card__img" src="images/products/lamp2.png" alt="lamp" height="406" width="230">
               <div class="lamp-card__content">
                 <h3 class="lamp-card__title">Malesuada Tempor Euismod</h3>
                 <div class="lamp-card__text">
@@ -495,90 +495,91 @@
       <section class="design">
         <div class="container container--sm">
           <h2 class="title design__title">New Design</h2>
-          <ul class="filter">
+          <ul class="filter design__filter">
             <li class="filter__item">
-              <button class="filter__btn filter__btn2" type="button" data-filter="all">All</button>
+              <button class="filter__btn" type="button" data-filter="all">All</button>
             </li>
             <li class="filter__item">
-              <button class="filter__btn filter__btn2" type="button"
+              <button class="filter__btn" type="button"
                 data-filter=".design_furnitures">Furnitures</button>
             </li>
             <li class="filter__item">
-              <button class="filter__btn filter__btn2" type="button" data-filter=".design_chairs">Chairs</button>
+              <button class="filter__btn" type="button" data-filter=".design-chairs">Chairs</button>
             </li>
             <li class="filter__item">
-              <button class="filter__btn filter__btn2" type="button" data-filter=".design_lighting">Lighting</button>
+              <button class="filter__btn" type="button" data-filter=".design-lighting">Lighting</button>
             </li>
             <li class="filter__item">
-              <button class="filter__btn filter__btn2" type="button" data-filter=".design_deco">Deco</button>
+              <button class="filter__btn" type="button" data-filter=".design-deco">Deco</button>
             </li>
           </ul>
 
-          <ul class="design">
-            <li class="design__item mix design_lighting">
+          <ul class="design__list">
+            <li class="design__item mix design-lighting">
               <article class="design-card">
-                <img class="design-card__img" src="images/design/1.jpg" alt="">
-                <a class="design-card__link" href="/"></a>
+                <img class="design-card__img" src="images/design/1.jpg" alt="product-design">
                 <h3 class="design-card__title">Beat Flat Pendant Black</h3>
                 <span class="design-card__text">Classic</span>
+                <a class="design-card__link" href="/"><span class="sr-only">link to design product</span></a>
               </article>
             </li>
 
-            <li class="design__item mix design_deco">
+            <li class="design__item mix design-deco">
               <article class="design-card">
-                <img class="design-card__img" src="images/design/2.jpg" alt="">
-                <a class="design-card__link" href="/"></a>
+                <img class="design-card__img" src="images/design/2.jpg" alt="product-design">
                 <h3 class="design-card__title">Lampe Sur Pieds Bamboo</h3>
                 <span class="design-card__text">Classic</span>
+                <a class="design-card__link" href="/"><span class="sr-only">link to design product</span></a>
               </article>
             </li>
 
-            <li class="design__item mix design_furnitures">
+            <li class="design__item mix design-furnitures">
               <article class="design-card">
-                <img class="design-card__img" src="images/design/3.jpg" alt="">
-                <a class="design-card__link" href="/"></a>
+                <img class="design-card__img" src="images/design/3.jpg" alt="product-design">
                 <h3 class="design-card__title">Rattan Rocking Chair</h3>
                 <span class="design-card__text">Classic</span>
+                <a class="design-card__link" href="/"><span class="sr-only">link to design product</span></a>
               </article>
             </li>
 
-            <li class="design__item mix design_lighting">
+            <li class="design__item mix design-lighting">
               <article class="design-card">
-                <img class="design-card__img" src="images/design/4.jpg" alt="">
-                <a class="design-card__link" href="/"></a>
+                <img class="design-card__img" src="images/design/4.jpg" alt="product-design">
                 <h3 class="design-card__title">Rattan Rocking Chair</h3>
                 <span class="design-card__text">Classic</span>
+                <a class="design-card__link" href="/"><span class="sr-only">link to design product</span></a>
               </article>
             </li>
 
-            <li class="design__item mix design_furnitures">
+            <li class="design__item mix design-furnitures">
               <article class="design-card">
-                <img class="design-card__img" src="images/design/5.jpg" alt="">
-                <a class="design-card__link" href="/"></a>
+                <img class="design-card__img" src="images/design/5.jpg" alt="product-design">
                 <h3 class="design-card__title">Rattan Rocking Chair</h3>
                 <span class="design-card__text">Classic</span>
+                <a class="design-card__link" href="/"><span class="sr-only">link to design product</span></a>
               </article>
             </li>
 
-            <li class="design__item mix design_chairs">
+            <li class="design__item mix design-chairs">
               <article class="design-card">
-                <img class="design-card__img" src="images/design/6.jpg" alt="">
-                <a class="design-card__link" href="/"></a>
+                <img class="design-card__img" src="images/design/6.jpg" alt="product-design">
                 <h3 class="design-card__title">Lampe Sur Pieds Bamboo</h3>
                 <span class="design-card__text">Classic</span>
+                <a class="design-card__link" href="/"><span class="sr-only">link to design product</span></a>
               </article>
             </li>
           </ul>
         </div>
+
+        <div class="video" style="background-image: url('images/video-bg.jpg');">
+          <a class="video__link" href="https://youtu.be/0EE-u2Ns9G0" data-fancybox>
+            <svg class="video__icon" width="22" height="25">
+              <use xlink:href="images/sprite.svg#video-play"></use>
+            </svg>
+          </a>
+        </div>
       </section>
 
-      <div class="video" style="background-image: url('images/video-bg.jpg');">
-        <a class="video__link" href="https://youtu.be/0EE-u2Ns9G0" data-fancybox>
-          <svg class="video__icon" width="22px" height="25px">
-            <use xlink:href="images/sprite.svg#video-play"></use>
-          </svg>
-        </a>
-      </div>
 
       <section class="articles">
         <div class="container container--sm">
@@ -588,53 +589,53 @@
           </div>
           <ul class="articles__list">
             <li class="articles__item">
-              <article class="articles-card">
-                <a class="articles-card__link" target="_blank" href="http://localhost:3000/"></a>
-                <div class="articles-card__images">
-                  <img class="articles-card__img" src="images/articles/1.jpg" alt="">
-                  <span class="articles-card__span">news</span>
+              <article class="article-card">
+                <div class="article-card__images">
+                  <img class="article-card__img" src="images/articles/1.jpg" alt="article-card img">
+                  <span class="article-card__label">news</span>
                 </div>
-                <div class="articles-card__description">
-                  <p class="articles-card__text">Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                <div class="article-card__text">
+                  <p>Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                 </div>
-                <div class="articles-card__info">
-                  <span class="articles-card__date">28 january, 2020</span>
-                  <span class="articles-card__author">by admin</span>
+                <div class="article-card__info">
+                  <time class="article-card__date">28 january, 2020</time>
+                  <span class="article-card__author">by admin</span>
                 </div>
+                <a class="article-card__link" target="_blank" href="/"><span class="sr-only">link to article product</span></a>
               </article>
             </li>
 
             <li class="articles__item">
-              <article class="articles-card">
-                <a class="articles-card__link" target="_blank" href="http://localhost:3000/"></a>
-                <div class="articles-card__images">
-                  <img class="articles-card__img" src="images/articles/2.jpg" alt="">
-                  <span class="articles-card__span">news</span>
+              <article class="article-card">
+                <div class="article-card__images">
+                  <img class="article-card__img" src="images/articles/2.jpg" alt="article-card img">
+                  <span class="article-card__label">news</span>
                 </div>
-                <div class="articles-card__description">
-                  <p class="articles-card__text">Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                <div class="article-card__text">
+                  <p>Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
                 </div>
-                <div class="articles-card__info">
-                  <span class="articles-card__date">28 january, 2020</span>
-                  <span class="articles-card__author">by admin</span>
+                <div class="article-card__info">
+                  <time class="article-card__date">28 january, 2020</time>
+                  <span class="article-card__author">by admin</span>
                 </div>
+                <a class="article-card__link" target="_blank" href="/"><span class="sr-only">link to article product</span></a>
               </article>
             </li>
 
             <li class="articles__item">
-              <article class="articles-card">
-                <a class="articles-card__link" target="_blank" href="http://localhost:3000/"></a>
-                <div class="articles-card__images">
-                  <img class="articles-card__img" src="images/articles/3.jpg" alt="">
-                  <span class="articles-card__span">news</span>
+              <article class="article-card">
+                <div class="article-card__images">
+                  <img class="article-card__img" src="images/articles/3.jpg" alt="article-card img">
+                  <span class="article-card__label">news</span>
                 </div>
-                <div class="articles-card__description">
-                  <p class="articles-card__text">Rncididunt ut labore et dolore magna aliqua. Ut enim</p>
+                <div class="article-card__text">
+                  <p>Rncididunt ut labore et dolore magna aliqua. Ut enim</p>
                 </div>
-                <div class="articles-card__info">
-                  <span class="articles-card__date">28 january, 2020</span>
-                  <span class="articles-card__author">by admin</span>
+                <div class="article-card__info">
+                  <time class="article-card__date">28 january, 2020</time>
+                  <span class="article-card__author">by admin</span>
                 </div>
+                <a class="article-card__link" target="_blank" href="/"><span class="sr-only">link to article product</span></a>
               </article>
             </li>
           </ul>
@@ -706,7 +707,7 @@
 
           <div class="footer__item">
             <a class="logo footer__logo" href="/">
-              <img class="logo__icon" src="images/logo.png" alt="logo icon">
+              <img class="logo__icon" src="images/logo.png" alt="logo icon" width="145" height="38">
             </a>
             <address class="address">
               <a class="address__item" href="/">

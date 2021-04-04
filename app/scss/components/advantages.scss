@@ -1,0 +1,64 @@
+.advantages {
+  display: flex;
+  justify-content: space-around;
+  background-color: $white_400;
+  font-family: $dm_sans;
+  min-height: 170px;
+
+  &__item {
+    padding: 40px 0 0 72px;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: "";
+      height: 50px;
+      width: 60px;
+      @include contain;
+      left: -20px;
+      top: 50px;
+    }
+
+    &--one::after {
+      background-image: url("../images/advantages/support.svg");
+    }
+    &--two::after {
+      background-image: url("../images/advantages/delivery.svg");
+    }
+    &--three::after {
+      background-image: url("../images/advantages/payment.svg");
+    }
+
+    &:not(:last-child)::before {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 1px;
+      background-color: $white_300;
+      top: 0;
+      right: -145px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    line-height: 2.2;
+    color: $gray_100;
+    text-overflow: clip;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+  }
+
+  &__text {
+    line-height: 1.9;
+    color: $gray_200;
+    max-width: 203px;
+    text-overflow: clip;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+}

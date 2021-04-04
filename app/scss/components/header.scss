@@ -9,6 +9,7 @@
 
 .menu {
   display: flex;
+  flex-wrap: wrap;
 
   &__item:not(:last-child) {
     margin-right: 30px;
@@ -20,6 +21,11 @@
     font-weight: 500;
     font-size: 15px;
     transition: color 0.15s linear;
+    text-overflow: clip;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
 
     &:focus {
       outline: 1px solid $blue_200;
@@ -33,6 +39,10 @@
       color: $blue_500;
     }
   }
+
+  .logo__icon {
+    object-fit: cover;
+  }
 }
 
 .user {
@@ -44,6 +54,12 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
+    &:hover {
+      .user__icon {
+        fill: #2c824b;
+      }
+    }
   }
 
   &__btn {
@@ -67,6 +83,7 @@
 
     &--menu {
       background-color: $gray_700;
+      transition: background-color 0.35s linear;
     }
   }
 

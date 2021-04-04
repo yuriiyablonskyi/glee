@@ -1,0 +1,67 @@
+.video {
+  @include cover;
+  min-height: 500px;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 110px;
+
+  &:before,
+  &__link {
+    @include pos_full;
+  }
+
+  &:before {
+    content: "";
+    background-color: rgba($black_100, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s linear;
+  }
+
+  &:hover:before {
+    opacity: 1;
+  }
+
+  &:hover &__icon {
+    fill: $blue_600;
+  }
+
+  &:hover &__link:before {
+    fill: $blue_500;
+    box-shadow: 0 0 1px 28px rgba($gray_700, 0.4);
+  }
+
+  &:hover &__link:after {
+    opacity: 1;
+    box-shadow: 0 0 1px 15px rgba($gray_700, 0.8);
+  }
+
+  &__link {
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      @include pos_center;
+      height: 98px;
+      width: 98px;
+      border-radius: 50%;
+      transition: box-shadow 0.3s linear;
+    }
+
+    &:before {
+      background-color: $gray_700;
+      box-shadow: 0 0 0 14px rgba($gray_700, 0.4);
+    }
+
+    &:after {
+      box-shadow: 0 $gray_700;
+      opacity: 0;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    @include pos_center;
+    fill: $white_100;
+    transition: fill 0.3s linear;
+  }
+}

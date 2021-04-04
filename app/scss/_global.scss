@@ -31,6 +31,11 @@ body {
   font-weight: 700;
   line-height: 1.2;
   font-family: $dm_sans;
+  text-overflow: clip;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
 }
 
 .sr-only {
@@ -47,7 +52,7 @@ body {
 }
 
 .btn {
-  padding: 24px 98px 22px 28px;
+  padding: 19px 85px 19px 15px;
   cursor: pointer;
   position: relative;
   transition: background-color 0.2s linear;
@@ -70,7 +75,7 @@ body {
     @include contain;
     height: 9px;
     width: 22px;
-    top: 27px;
+    top: 24px;
     right: 18px;
   }
 }
