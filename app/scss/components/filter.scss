@@ -3,6 +3,12 @@
   justify-content: center;
   margin-bottom: 70px;
 
+  @include r($ph) {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+
   &__item:not(:last-child) {
     margin-right: 25px;
   }

@@ -1,9 +1,19 @@
 .footer {
   margin-top: auto;
 
+  @include r($ds) {
+    .logo__icon {
+      margin: 0 auto;
+    }
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include r($ds) {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -11,6 +21,18 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 60px;
+
+    @include r($ds) {
+      width: 50%;
+      justify-content: space-between;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    @include r($ph) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 
   &__heading {
@@ -41,6 +63,10 @@
 
   &__text {
     margin-bottom: 20px;
+
+    @include r($ds) {
+      margin-bottom: 10px;
+    }
   }
 
   &__link {
@@ -132,6 +158,10 @@
 .form {
   display: flex;
 
+  @include r($ds) {
+    justify-content: center;
+  }
+
   &__email {
     background-color: $white_400;
     font-size: $xs;
@@ -186,12 +216,22 @@
   margin: 36px 0 40px;
   position: relative;
 
+  @include r($ph) {
+    flex-direction: column;
+    text-align: center;
+    margin: 10px 0;
+  }
+
   &__text {
     text-overflow: clip;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 2;
     overflow: hidden;
+
+    @include r($ph) {
+      order: 2;
+    }
   }
 
   &:before {
@@ -203,5 +243,16 @@
     height: 1px;
     width: 100%;
     background-color: $white_200;
+
+    @include r($ph) {
+      display: none;
+    }
+  }
+
+  .menu {
+    @include r($ph) {
+      justify-content: center;
+      order: 1;
+    }
   }
 }

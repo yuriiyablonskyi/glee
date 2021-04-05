@@ -27,6 +27,29 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+
+    @include r($ds) {
+      min-height: 620px;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    @include r($ph) {
+      min-height: 440px;
+    }
+  }
+
+  &__content {
+    @include r($ds) {
+      margin: 0 auto;
+    }
+  }
+
+  &__img {
+    @include r($ds) {
+      margin: 0 auto;
+      height: auto;
+    }
   }
 
   &__heading {
@@ -41,6 +64,15 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
+
+    @include r($ds) {
+      font-size: 55px;
+      margin-bottom: 5px;
+    }
+
+    @include r($ph) {
+      font-size: 40px;
+    }
   }
 
   &__text {

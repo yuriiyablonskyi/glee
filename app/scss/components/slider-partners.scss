@@ -1,6 +1,10 @@
 .slider-partners {
   background-color: $white_900;
-  margin-bottom: 96px;
+  margin-bottom: 100px;
+
+  @include r($ds) {
+    margin-bottom: 50px;
+  }
 
   &__list {
     display: flex;
@@ -14,10 +18,10 @@
     display: flex !important;
     align-items: center;
     justify-content: center;
-  }
 
-  &__img {
-    // max-height: 100%;
+    @include r($tb) {
+      height: 180px;
+    }
   }
 
   .slick-slide {

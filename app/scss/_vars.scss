@@ -31,6 +31,8 @@ $white_700:  #FFD8B6;
 $white_800:  #ECF1F4;
 $white_900:  #FFEFE2;
 
+$pink_100:   #fffbf1;
+
 $xxl: 72px;
 $xl: 36px;
 $md: 26px;
@@ -44,6 +46,11 @@ $dm_sans: 'DM Sans', sans-serif;
 $poppins: 'Poppins', sans-serif;
 $rubik: 'Rubik', sans-serif;
 $myriadpro: 'Myriad Pro', sans-serif;
+
+$ph: 575;
+$tb: 767;
+$lp: 991;
+$ds: 1366;
 
 @mixin contain {
   background-repeat: no-repeat;
@@ -69,6 +76,30 @@ $myriadpro: 'Myriad Pro', sans-serif;
   bottom: 0;
   left: 0;
 }
+
+ @mixin r($ph) {
+   @media only screen and (max-width: $ph+ "px") {
+     @content;
+   }
+ }
+
+ @mixin r($tb) {
+   @media only screen and (max-width: $tb+ "px") {
+     @content;
+   }
+ }
+
+ @mixin r($lp) {
+   @media only screen and (max-width: $lp+ "px") {
+     @content;
+   }
+ }
+ 
+ @mixin r($ds) {
+   @media only screen and (max-width: $ds+ "px") {
+     @content;
+   }
+ }
 
  @function max($numbers...) {
    @return m#{a}x(#{$numbers});

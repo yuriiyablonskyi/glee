@@ -4,6 +4,16 @@
   position: relative;
   cursor: pointer;
   margin-bottom: 110px;
+  
+  @include r($tb) {
+    margin-bottom: 60px;
+    min-height: 400px;
+  }
+
+  @include r($ph) {
+    min-height: 300px;
+    margin-bottom: 30px;
+  }
 
   &:before,
   &__link {

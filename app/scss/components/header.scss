@@ -1,9 +1,104 @@
+.wrapper {
+  &--active {
+    padding-top: 145px;
+
+    @include r($ph) {
+      padding-top: 125px;
+    }
+  }
+}
+
 .header {
+  background-color: $white_100;
+  transition: background-color 0.2s linear;
+
+  &--fixed {
+    position: fixed;
+    background-color: $pink_100;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 48px 0 45px;
+    flex-wrap: wrap;
+
+    @include r($ph) {
+      padding: 10px 0;
+      position: relative;
+      flex-direction: column;
+    }
+
+    .close {
+      position: absolute;
+      padding: 5px;
+      top: 20px;
+      right: 20px;
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      z-index: 10;
+      background-image: url("../images/close.svg");
+      @include contain;
+      cursor: pointer;
+      display: none;
+
+      @include r($lp) {
+        &--active {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .menu {
+    @include r($lp) {
+      position: absolute;
+      flex-direction: column;
+      background-color: #ecf1f4;
+      left: 0;
+      right: 0;
+      text-align: center;
+      top: 0;
+      border-radius: 40px;
+      padding: 30px 0 10px;
+      transform: translateX(150%);
+      z-index: 5;
+      transition: all 1.3s linear;
+    }
+
+    &--active {
+      transform: translateX(0);
+    }
+
+    @include r($ph) {
+      transition: all 0.75s linear;
+    }
+
+    &__item {
+      @include r($lp) {
+        padding: 5px 0;
+      }
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 30px;
+
+      @include r($lp) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.logo {
+  @include r($ph) {
+    margin-bottom: 15px;
   }
 }
 
@@ -48,6 +143,15 @@
 .user {
   display: flex;
 
+  @include r($ph) {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__box {
+    display: flex;
+  }
+
   &__btn,
   &__shopping {
     display: flex;
@@ -63,8 +167,8 @@
   }
 
   &__btn {
-    height: 51px;
-    width: 51px;
+    height: 52px;
+    width: 52px;
     border-radius: 50%;
     transition: background-color 0.2s linear;
 
@@ -79,8 +183,11 @@
     &--search {
       margin-right: 21px;
       background-color: $white_800;
-    }
 
+      @include r($ph) {
+        margin-right: 5px;
+      }
+    }
     &--menu {
       background-color: $gray_700;
       transition: background-color 0.35s linear;
@@ -89,8 +196,8 @@
 
   &__shopping {
     background-color: $white_700;
-    width: 89px;
-    height: 50px;
+    width: 90px;
+    height: 52px;
     transition: background-color 0.2s linear;
     position: relative;
 
@@ -125,6 +232,10 @@
       border-top-right-radius: 25px;
       border-bottom-right-radius: 25px;
       margin-right: 18px;
+
+      @include r($ph) {
+        margin-right: 5px;
+      }
     }
   }
 

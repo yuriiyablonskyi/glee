@@ -10,6 +10,14 @@
   position: relative;
   z-index: 0;
 
+  @include r($ds) {
+    margin: 0 auto;
+  }
+
+  @include r($ph) {
+    padding: 10px;
+  }
+
   &__img {
     position: absolute;
     right: 0;

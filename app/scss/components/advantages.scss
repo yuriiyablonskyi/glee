@@ -5,10 +5,29 @@
   font-family: $dm_sans;
   min-height: 170px;
 
+  @include r($lp) {
+    flex-wrap: wrap;
+    justify-content: start;
+    padding-bottom: 20px;
+  }
+
+  @include r($tb) {
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__item {
     padding: 40px 0 0 72px;
     position: relative;
 
+    @include r($lp) {
+      width: 50%;
+    }
+
+    @include r($tb) {
+      padding: 40px 0 0 0;
+    }
+    
     &:after {
       position: absolute;
       content: "";
@@ -17,6 +36,14 @@
       @include contain;
       left: -20px;
       top: 50px;
+
+      @include r($lp) {
+        left: 0;
+      }
+
+      @include r($tb) {
+        left: -67px;
+      }
     }
 
     &--one::after {
@@ -37,6 +64,10 @@
       background-color: $white_300;
       top: 0;
       right: -145px;
+
+      @include r($ds) {
+        display: none;
+      }
     }
   }
 

@@ -11,6 +11,10 @@
   transition: box-shadow 0.2s linear;
   background-color: $gray_800;
 
+  @include r($ds) {
+    margin: 0 auto;
+  }
+
   &:hover {
     border-radius: 15px;
     box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.2);

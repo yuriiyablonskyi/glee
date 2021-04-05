@@ -1,6 +1,6 @@
 .articles {
   position: relative;
-  
+
   &:after {
     position: absolute;
     content: "";
@@ -10,6 +10,10 @@
     height: 179px;
     background-color: $white_900;
     z-index: -1;
+
+    @include r($ds) {
+      display: none;
+    }
   }
 
   &__heading {
@@ -17,12 +21,26 @@
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 47px;
+
+    @include r($ph) {
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
   }
 
   &__list {
     display: flex;
     flex-wrap: wrap;
     margin-right: -20px;
+    
+    @include r($ds) {
+      margin-right: 0;
+      justify-content: center;
+    }
+
+    @include r($ph) {
+      margin-right: 0;
+    }
   }
 
   &__link {
@@ -33,7 +51,7 @@
     padding-right: 23px;
     position: relative;
     transition: color 0.15s linear;
-    
+
     &:after {
       content: "";
       position: absolute;
@@ -45,7 +63,7 @@
       width: 7px;
       transition: transform 0.2s linear;
     }
-    
+
     &:focus {
       text-decoration: underline;
     }
@@ -53,18 +71,27 @@
     &:hover:after {
       transform: scale(1.5) translateX(10px);
     }
-    
+
     &:hover {
       color: $blue_700;
     }
-    
+
     &:active {
       color: $black_100;
     }
   }
 
   &__item {
-    width: calc(100% /3);
+    width: calc(100% / 3);
     margin-bottom: 17px;
+
+    @include r($ds) {
+      width: calc(100% / 2);
+      margin-bottom: 30px;
+    }
+
+    @include r($tb) {
+      width: calc(100%);
+    }
   }
 }

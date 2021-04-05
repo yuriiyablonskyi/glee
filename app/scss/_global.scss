@@ -34,8 +34,12 @@ body {
   text-overflow: clip;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 2;
   overflow: hidden;
+
+  @include r($ph) {
+    font-size: $md;
+  }
 }
 
 .sr-only {
@@ -55,6 +59,7 @@ body {
   padding: 19px 85px 19px 15px;
   cursor: pointer;
   position: relative;
+  display: inline-block;
   transition: background-color 0.2s linear;
 
   &:focus {
@@ -75,7 +80,7 @@ body {
     @include contain;
     height: 9px;
     width: 22px;
-    top: 24px;
+    top: 30px;
     right: 18px;
   }
 }
